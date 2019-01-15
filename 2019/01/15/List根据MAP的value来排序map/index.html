@@ -120,24 +120,24 @@
   <article id="post">
     <h1>List根据MAP的value来排序map</h1>
     <p class="page-title-sub">
-      <span id="post-title-date">撰写于 2019-01-15</span>
+      <span id="post-title-date">Created at 2019-01-15</span>
       
-        <span id="post-title-updated">修改于 2019-01-15</span>
+        <span id="post-title-updated">Updated at 2019-01-15</span>
       
       
       
     </p>
     
-    <p>//list中Map根据value排序<br>     Collections.sort(list, new Comparator&lt;Map&lt;String, Object&gt;&gt;() {<br>            public int compare(Map&lt;String, Object&gt; o1, Map&lt;String, Object&gt; o2) {<br>                Integer name1 = Integer.valueOf(o1.get(“cj”).toString()) ;//name1是从你list里面拿出来的一个<br>                Integer name2 = Integer.valueOf(o2.get(“cj”).toString()) ; //name1是从你list里面拿出来的第二个name<br>                return name1.compareTo(name2);<br>            }</p>
-<pre><code>});
-</code></pre><hr>
+    <p>//list中Map根据value排序<br>     Collections.sort(list, new Comparator&lt;Map&lt;String, Object&gt;&gt;() {<br>            public int compare(Map&lt;String, Object&gt; o1, Map&lt;String, Object&gt; o2) {<br>                Integer name1 = Integer.valueOf(o1.get(“cj”).toString()) ;//name1是从你list里面拿出来的一个<br>                Integer name2 = Integer.valueOf(o2.get(“cj”).toString()) ; //name1是从你list里面拿出来的第二个name<br>                return name1.compareTo(name2);<br>            }<br>            });</p>
+<p>//获取前30天时间<br>    String beginDate = “2019-01-15 10:00:00”;<br>    String date = beginDate.substring(0, 10);<br>        //创建一个放着30天的map<br>    for(int i=30;i&gt;=1;i–){<br>        try {<br>            Date date1 = new SimpleDateFormat(“yyyy-MM-dd”).parse(date);<br>            calendar.setTime(date1);<br>            calendar.add(Calendar.DATE, -i);<br>            String yesterDay = new SimpleDateFormat(“yyyy-MM-dd”).format(calendar.getTime());<br>            Map&lt;String,String&gt; map = new HashMap&lt;&gt;();<br>            map.put(“name”,yesterDay);<br>            map.put(“value”, “0.00”);<br>            list.add(map);<br>        } catch (ParseException e) {<br>            e.printStackTrace();<br>        }<br>    }</p>
+<hr>
 
   </article>
   <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
-    <h2>目录</h2>
+    <h2>Table of Content</h2>
     
   </div>
 </div>
@@ -149,7 +149,7 @@
   
 
   
-    <a href="/2018/11/20/大四毕业设计/" class="next">下一篇 大四毕业设计 &rarr;</a>
+    <a href="/2018/11/20/大四毕业设计/" class="next">Next post 大四毕业设计 &rarr;</a>
   
 </nav>
 
